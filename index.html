@@ -1,326 +1,205 @@
 <!doctype html>
 <html lang="en" data-bs-theme="light">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shivam Goswami | Computer Science, AI & Cybersecurity</title>
-  <meta name="description"
-    content="Portfolio of Shivam Goswami, B.Tech CSE student at Indus University Ahmedabad: AI attendance systems, full-stack development and cybersecurity.">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
-    rel="stylesheet">
-  <style>
-    :root {
-      --ac: #0f766e
-    }
-
-    [data-bs-theme=dark] {
-      --ac: #2dd4bf
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 70px
-    }
-
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif
-    }
-
-    .navbar {
-      backdrop-filter: blur(8px)
-    }
-
-    .text-ac {
-      color: var(--ac)
-    }
-
-    .btn-ac {
-      background: var(--ac);
-      border-color: var(--ac);
-      color: #fff
-    }
-
-    .btn-ac:hover {
-      filter: brightness(1.1);
-      color: #fff
-    }
-
-    .btn-outline-ac {
-      border-color: var(--ac);
-      color: var(--ac)
-    }
-
-    .btn-outline-ac:hover {
-      background: var(--ac);
-      color: #fff
-    }
-
-    .hero {
-      padding: 7rem 0 4rem
-    }
-
-    .hero h1 {
-      font-size: clamp(2.6rem, 8vw, 5rem);
-      font-weight: 700;
-      letter-spacing: -.03em;
-      line-height: 1
-    }
-
-    .sec {
-      padding: 4.5rem 0
-    }
-
-    .sec-alt {
-      background: var(--bs-tertiary-bg)
-    }
-
-    .sec h2 {
-      font-weight: 700;
-      letter-spacing: -.02em;
-      margin-bottom: 2rem
-    }
-
-    .stat b {
-      display: block;
-      font-size: 2rem;
-      color: var(--ac);
-      line-height: 1.1
-    }
-
-    .tl {
-      border-left: 3px solid var(--ac);
-      padding: 0 0 1.5rem 1.25rem;
-      position: relative
-    }
-
-    .tl::before {
-      content: "";
-      position: absolute;
-      left: -9px;
-      top: 4px;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background: var(--ac)
-    }
-
-    .tag {
-      font-weight: 500
-    }
-
-    .card {
-      transition: transform .15s
-    }
-
-    .card:hover {
-      transform: translateY(-3px)
-    }
-
-    .accordion-button:not(.collapsed) {
-      color: var(--ac)
-    }
-
-    a:focus-visible,
-    button:focus-visible {
-      outline: 3px solid var(--ac);
-      outline-offset: 2px
-    }
-
-    @media (prefers-reduced-motion:reduce) {
-      html {
-        scroll-behavior: auto
-      }
-
-      .card {
-        transition: none
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shivam Goswami | Computer Science, AI & Cybersecurity</title>
+<meta name="description" content="Portfolio of Shivam Goswami, B.Tech CSE student at Indus University Ahmedabad: AI attendance systems, full-stack development and cybersecurity.">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+html[data-bs-theme=light]{--ink:#10204a;--paper:#f1f5fc;--panel:#e2eafa;--ac:#2540ff;--on-ac:#fff;--hi:#ffd23f;--line:#10204a;--grid:rgba(37,64,255,.09);--bs-body-bg:var(--paper);--bs-body-color:var(--ink);--bs-secondary-color:#3d4d7a;--bs-border-color:var(--line)}
+html[data-bs-theme=dark]{--ink:#e8eeff;--paper:#0c2260;--panel:#0a1c52;--ac:#ffd23f;--on-ac:#0c2260;--hi:#ffd23f;--line:#9fb4ff;--grid:rgba(159,180,255,.13);--bs-body-bg:var(--paper);--bs-body-color:var(--ink);--bs-secondary-color:#b9c7f5;--bs-border-color:var(--line)}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-color:var(--paper);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:32px 32px}
+h1,h2,h3,.h4,.h5,.navbar-brand,.btn,.stat b{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif}
+.navbar{background:var(--paper)!important;border-bottom:2px solid var(--line)!important}
+.navbar .nav-link{color:var(--ink);font-weight:600}
+.text-ac{color:var(--ac)}
+.btn{border-radius:4px;font-weight:600}
+.btn-ac{background:var(--ac);border:2px solid var(--ac);color:var(--on-ac)}
+.btn-ac:hover{filter:brightness(1.1);color:var(--on-ac)}
+.btn-outline-ac{border:2px solid var(--ac);color:var(--ac)}
+.btn-outline-ac:hover{background:var(--ac);color:var(--on-ac)}
+#theme{border:2px solid var(--line);color:var(--ink)}
+.hero{padding:7rem 0 4.5rem}
+.hero h1{font-size:clamp(3rem,10vw,6.5rem);font-weight:800;letter-spacing:-.04em;line-height:.95;margin-bottom:1rem}
+.dim{display:flex;align-items:center;gap:.75rem;color:var(--ac);font-weight:600}
+.dim i{flex:1;height:14px;border-left:2px solid;background:linear-gradient(currentColor,currentColor) center/100% 2px no-repeat}
+.dim i:last-child{border-left:0;border-right:2px solid}
+.sec{padding:4.5rem 0}
+.sec-alt{background:var(--panel);border-block:2px solid var(--line)}
+.sec h2{font-weight:800;letter-spacing:-.03em;margin-bottom:2rem;display:inline-block;border-bottom:5px solid var(--hi);padding-bottom:.15rem}
+.stat,.card{background:var(--paper)!important;border:2px solid var(--line)!important;border-radius:4px!important;box-shadow:none!important}
+.stat b{font-size:2.2rem;color:var(--ac);line-height:1.1;font-weight:800}
+.tl{border-left:3px solid var(--ac);padding:0 0 1.5rem 1.25rem;position:relative}
+.tl::before{content:"";position:absolute;left:-9px;top:4px;width:15px;height:15px;background:var(--hi);border:2px solid var(--line)}
+.tag{background:transparent!important;color:var(--bs-body-color)!important;border:1.5px solid var(--line)!important;border-radius:3px;font-weight:500}
+.badge.text-bg-light{background:var(--hi)!important;color:#10204a!important;border:2px solid #10204a!important;border-radius:3px}
+.form-control{background:var(--paper);color:var(--ink);border:2px solid var(--line);border-radius:4px}
+.form-control:focus{background:var(--paper);color:var(--ink);border-color:var(--ac);box-shadow:none}
+.list-group{gap:.75rem}
+.list-group-item{background:var(--paper);color:var(--ink);border:2px solid var(--line)!important;border-radius:4px!important}
+.list-group-item:hover{background:var(--panel);color:var(--ink)}
+footer{border-top:2px solid var(--line)!important}
+a:focus-visible,button:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
-
 <body>
 
-  <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary border-bottom">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#home">SG<span class="text-ac">.</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav"
-        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1" id="navlinks"></ul>
-        <button class="btn btn-sm btn-outline-secondary ms-lg-3 mt-2 mt-lg-0" id="theme"
-          aria-label="Toggle light and dark theme"><i class="bi bi-circle-half"></i></button>
+<nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#home">SG<span class="text-ac">.</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1" id="navlinks"></ul>
+      <button class="btn btn-sm btn-outline-secondary ms-lg-3 mt-2 mt-lg-0" id="theme" aria-label="Toggle light and dark theme"><i class="bi bi-circle-half"></i></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+<header id="home" class="hero">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8">
+        <h1>Shivam Goswami</h1>
+        <div class="dim" aria-label="B.Tech CSE, Indus University, batch of 2028"><i></i><span>B.Tech CSE, Indus University, batch of 2028</span><i></i></div>
+        <p class="lead text-body-secondary mt-3 mb-4">Computer Science student building <strong class="text-body">AI-powered systems</strong> and <strong class="text-body">full-stack apps</strong>, and learning <strong class="text-body">cybersecurity</strong> hands-on. Led Team Attendoo at Smart India Hackathon 2025.</p>
+        <a href="#projects" class="btn btn-ac btn-lg me-2 mb-2">View projects</a>
+        <a href="#contact" class="btn btn-outline-ac btn-lg mb-2">Contact me</a>
+      </div>
+      <div class="col-lg-4">
+        <div class="row g-3 text-center" id="stats"></div>
       </div>
     </div>
-  </nav>
+  </div>
+</header>
 
-  <main>
-    <header id="home" class="hero">
-      <div class="container">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-8">
-            <p class="text-ac fw-semibold mb-2">B.Tech CSE · Indus University · Batch of 2028</p>
-            <h1>Shivam Goswami</h1>
-            <p class="lead text-body-secondary mt-3 mb-4">Computer Science student building <strong
-                class="text-body">AI-powered systems</strong> and <strong class="text-body">full-stack apps</strong>,
-              and learning <strong class="text-body">cybersecurity</strong> hands-on. Led Team Attendoo at Smart India
-              Hackathon 2025.</p>
-            <a href="#projects" class="btn btn-ac btn-lg me-2 mb-2">View projects</a>
-            <a href="#contact" class="btn btn-outline-ac btn-lg mb-2">Contact me</a>
-          </div>
-          <div class="col-lg-4">
-            <div class="row g-3 text-center" id="stats"></div>
-          </div>
-        </div>
+<section id="about" class="sec sec-alt">
+  <div class="container">
+    <h2>About me</h2>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <p>I'm a Third-year B.Tech student at Indus University, Ahmedabad. I like projects where software meets the real world: a face-recognition attendance system, an AI tutoring robot, and security work in a SOC.</p>
+        <p>I lead teams, build with the MERN stack and OpenCV, and recently interned in SOC and VAPT. I also anchor events for the Rotaract Club, so I'm comfortable on stage as well as in the terminal.</p>
       </div>
-    </header>
-
-    <section id="about" class="sec sec-alt">
-      <div class="container">
-        <h2>About me</h2>
-        <div class="row g-4">
-          <div class="col-lg-6">
-            <p>I'm a third-year B.Tech student at Indus University, Ahmedabad. I like projects where software meets the
-              real world: a face-recognition attendance system, an AI tutoring robot, and security work in a SOC.</p>
-            <p>I lead teams, build with the MERN stack and OpenCV, and recently interned in SOC and VAPT. I also anchor
-              events for the Rotaract Club, so I'm comfortable on stage as well as in the terminal.</p>
-          </div>
-          <div class="col-lg-6">
-            <dl class="row mb-0" id="facts"></dl>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="sec">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="row g-4" id="projlist"></div>
-      </div>
-    </section>
-
-    <section id="learning" class="sec sec-alt">
-      <div class="container">
-        <h2>What I'm learning</h2>
-        <div class="row g-4" id="lab"></div>
-      </div>
-    </section>
-
-    <section id="skills" class="sec">
-      <div class="container">
-        <h2>Technical skills</h2>
-        <div class="row g-4" id="skilllist"></div>
-      </div>
-    </section>
-
-    <section id="experience" class="sec sec-alt">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-6">
-            <h2>Experience</h2>
-            <div id="exp"></div>
-          </div>
-          <div class="col-lg-6">
-            <h2>Education & achievements</h2>
-            <div id="edu"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="sec">
-      <div class="container">
-        <h2>Let's connect</h2>
-        <div class="row g-5">
-          <div class="col-lg-6">
-            <p class="text-body-secondary">I'm open to internships in software development, AI/ML and cybersecurity
-              (on-site, hybrid or remote). Happy to collaborate on projects.</p>
-            <form id="form" novalidate>
-              <div class="mb-3"><label for="n" class="form-label">Name</label><input id="n" class="form-control"
-                  required autocomplete="name">
-                <div class="invalid-feedback">Please enter your name.</div>
-              </div>
-              <div class="mb-3"><label for="e" class="form-label">Email</label><input id="e" type="email"
-                  class="form-control" required autocomplete="email">
-                <div class="invalid-feedback">Please enter a valid email.</div>
-              </div>
-              <div class="mb-3"><label for="m" class="form-label">Message</label><textarea id="m" rows="4"
-                  class="form-control" required></textarea>
-                <div class="invalid-feedback">Please write a message.</div>
-              </div>
-              <button class="btn btn-ac" type="submit">Send message</button>
-            </form>
-          </div>
-          <div class="col-lg-6">
-            <div class="list-group" id="links"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="border-top py-4">
-    <div class="container d-flex flex-wrap justify-content-between gap-2 small text-body-secondary">
-      <span>© <span id="yr"></span> Shivam Goswami</span><a href="#home" class="text-body-secondary">Back to top ↑</a>
+      <div class="col-lg-6"><dl class="row mb-0" id="facts"></dl></div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-  <script>
+<section id="projects" class="sec">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="row g-4" id="projlist"></div>
+  </div>
+</section>
 
-    const EMAIL = "shivamgoswami.24.cse@iite.indusuni.ac.in";     
-    const GITHUB = "https://github.com/Shivam-Goswami-8"; 
-    const LINKEDIN = "https://www.linkedin.com/in/shivam-goswami-936866318/";
-    const NAV = [["about", "About"], ["projects", "Projects"], ["learning", "Learning"], ["skills", "Skills"], ["experience", "Experience"], ["contact", "Contact"]];
-    const STATS = [["2028", "B.Tech graduation"], ["2 mo", "SOC & VAPT internship"], ["4", "Certifications"], ["2", "Team projects"]];
-    const FACTS = [["Education", "B.Tech Computer Science, Indus University Ahmedabad (2024–2028)"], ["Focus areas", "AI/ML, full-stack web, cybersecurity"], ["Leadership", "Team lead at Smart India Hackathon 2025; Rotaract Club member and event anchor"], ["Seeking", "Internships in software, AI/ML and cybersecurity"]];
-    const PROJECTS = [
-      { t: "Attendoo (SAMS)", f: "AI Automated Attendance System", y: "2025", s: "SIH 2025 internal round", tags: ["OpenCV", "Face Recognition", "Node.js", "EJS"], d: "Real-time attendance system for Smart India Hackathon 2025. It reads a live CCTV-style video feed, recognizes students' faces and marks attendance automatically, with dashboards for administrators, faculty and parents. Designed with encryption and controlled access for privacy. I led the team.", i: "No manual roll call, proxy-proof verification, no extra hardware" },
-      { t: "HAB", f: "AI-Powered Educational Robo Tutor", y: "2025–26", s: "In progress", tags: ["AI/ML", "Embedded", "Back-end", "Web"], d: "An interactive robot built under Indus University to help students learn, clear doubts and get personalized tutoring. Combines hardware integration with AI and a web back end.", i: "Hardware and AI integration for tutoring" }];
-    const LAB = [["Cybersecurity", ["SOC monitoring and alert triage (Drona Cyber Solutions)", "Vulnerability assessment and penetration testing (VAPT)", "Python scripting for security tasks"]],
-    ["Full-stack web", ["MERN stack: Node.js, Express, MongoDB, REST APIs", "Authentication and security basics", "Git and GitHub workflow"]],
-    ["AI / Computer vision", ["Face recognition pipelines with OpenCV", "Deep learning model experiments", "AI integration on the HAB robot"]],
-    ["Problem solving", ["Data structures and algorithms in Java", "Core C programming"]]];
-    const SKILLS = [["Languages", "Java Python C JavaScript HTML/CSS"], ["Web", "Node.js Express EJS REST-APIs"], ["Database", "MongoDB Mongoose"], ["AI & Vision", "OpenCV Face-Recognition"], ["Security", "SOC VAPT"], ["Tools", "Git GitHub"], ["Soft skills", "Team-Leadership Public-Speaking"]];
-    const EXP = [["Internship · Nov–Dec 2025", "Intern Trainee, SOC and VAPT", "Drona Cyber Solutions Pvt Ltd, Ahmedabad", "Hands-on work in Security Operations Center monitoring and vulnerability assessment and penetration testing, using Python."]];
-    const EDU = [["2024–2028", "B.Tech Computer Science", "Indus University Ahmedabad", "Core coursework in C and computer science fundamentals; projects in AI, web and embedded systems."],
-    ["2025", "Smart India Hackathon 2025, Internal Round", "Team lead, Team Attendoo", "Led the team that built the Attendoo attendance system."],
-    ["Aug 2025", "Certificate of Appreciation, Anchor", "Rotaract Club of Indus University", "Anchored the club's installation ceremony. Green Member since Sep 2025."],
-    ["Certifications", "Full-Stack Web Development Bootcamp (Udemy, 2025); DSA in Java (Apna College)", "", ""]];
+<section id="learning" class="sec sec-alt">
+  <div class="container">
+    <h2>What I'm learning</h2>
+    <div class="row g-4" id="lab"></div>
+  </div>
+</section>
 
+<section id="skills" class="sec">
+  <div class="container">
+    <h2>Technical skills</h2>
+    <div class="row g-4" id="skilllist"></div>
+  </div>
+</section>
 
-    const $ = s => document.querySelector(s);
-    const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-    const tags = a => a.map(t => `<span class="badge text-bg-secondary-subtle border tag me-1 mb-1">${esc(t.replace(/-/g, " "))}</span>`).join("");
+<section id="experience" class="sec sec-alt">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-6"><h2>Experience</h2><div id="exp"></div></div>
+      <div class="col-lg-6"><h2>Education & achievements</h2><div id="edu"></div></div>
+    </div>
+  </div>
+</section>
 
-    $("#navlinks").innerHTML = NAV.map(([h, l]) => `<li class="nav-item"><a class="nav-link" href="#${h}" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">${l}</a></li>`).join("");
-    $("#stats").innerHTML = STATS.map(([a, b]) => `<div class="col-6"><div class="stat border rounded-3 p-3 bg-body-tertiary"><b>${a}</b><small class="text-body-secondary">${b}</small></div></div>`).join("");
-    $("#facts").innerHTML = FACTS.map(([a, b]) => `<dt class="col-sm-4">${a}</dt><dd class="col-sm-8">${esc(b)}</dd>`).join("");
-    $("#projlist").innerHTML = PROJECTS.map(p => `<div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-body">
+<section id="contact" class="sec">
+  <div class="container">
+    <h2>Let's connect</h2>
+    <div class="row g-5">
+      <div class="col-lg-6">
+        <p class="text-body-secondary">I'm open to internships in software development, AI/ML and cybersecurity (on-site, hybrid or remote). Happy to collaborate on projects.</p>
+        <form id="form" novalidate>
+          <div class="mb-3"><label for="n" class="form-label">Name</label><input id="n" class="form-control" required autocomplete="name"><div class="invalid-feedback">Please enter your name.</div></div>
+          <div class="mb-3"><label for="e" class="form-label">Email</label><input id="e" type="email" class="form-control" required autocomplete="email"><div class="invalid-feedback">Please enter a valid email.</div></div>
+          <div class="mb-3"><label for="m" class="form-label">Message</label><textarea id="m" rows="4" class="form-control" required></textarea><div class="invalid-feedback">Please write a message.</div></div>
+          <button class="btn btn-ac" type="submit">Send message</button>
+        </form>
+      </div>
+      <div class="col-lg-6"><div class="list-group" id="links"></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="border-top py-4">
+  <div class="container d-flex flex-wrap justify-content-between gap-2 small text-body-secondary">
+    <span>© <span id="yr"></span> Shivam Goswami</span><a href="#home" class="text-body-secondary">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script>
+/* ---------- EDIT YOUR CONTENT HERE ---------- */
+const EMAIL = "shivamgoswami.24.cse@iite.indusuni.ac.in";
+const GITHUB = "https://github.com/Shivam-Goswami-8";
+const LINKEDIN = "https://www.linkedin.com/in/shivam-goswami-936866318/";
+const NAV = [["about", "About"], ["projects", "Projects"], ["learning", "Learning"], ["skills", "Skills"], ["experience", "Experience"], ["contact", "Contact"]];
+const STATS = [["2028", "B.Tech graduation"], ["2 mo", "SOC & VAPT internship"], ["4", "Certifications"], ["2", "Team projects"]];
+const FACTS = [["Education", "B.Tech Computer Science, Indus University Ahmedabad (2024–2028)"], ["Focus areas", "AI/ML, full-stack web, cybersecurity"], ["Leadership", "Team lead at Smart India Hackathon 2025; Rotaract Club member and event anchor"], ["Seeking", "Internships in software, AI/ML and cybersecurity"]];
+const PROJECTS = [
+{ t: "Attendoo (SAMS)", f: "AI Automated Attendance System", y: "2025", s: "SIH 2025 internal round", tags: ["OpenCV", "Face Recognition", "Node.js", "EJS"], d: "Real-time attendance system for Smart India Hackathon 2025. It reads a live CCTV-style video feed, recognizes students' faces and marks attendance automatically, with dashboards for administrators, faculty and parents. Designed with encryption and controlled access for privacy. I led the team.", i: "No manual roll call, proxy-proof verification, no extra hardware" },
+{ t: "HAB", f: "AI-Powered Educational Robo Tutor", y: "2025–26", s: "In progress", tags: ["AI/ML", "Embedded", "Back-end", "Web"], d: "An interactive robot built under Indus University to help students learn, clear doubts and get personalized tutoring. Combines hardware integration with AI and a web back end.", i: "Hardware and AI integration for tutoring" }];
+const LAB = [["Cybersecurity", ["SOC monitoring and alert triage (Drona Cyber Solutions)", "Vulnerability assessment and penetration testing (VAPT)", "Python scripting for security tasks"]],
+["Full-stack web", ["MERN stack: Node.js, Express, MongoDB, REST APIs", "Authentication and security basics", "Git and GitHub workflow"]],
+["AI / Computer vision", ["Face recognition pipelines with OpenCV", "Deep learning model experiments", "AI integration on the HAB robot"]],
+["Problem solving", ["Data structures and algorithms in Java", "Core C programming"]]];
+const SKILLS = [["Languages", "Java Python C JavaScript HTML/CSS"], ["Web", "Node.js Express EJS REST-APIs"], ["Database", "MongoDB Mongoose"], ["AI & Vision", "OpenCV Face-Recognition"], ["Security", "SOC VAPT"], ["Tools", "Git GitHub"], ["Soft skills", "Team-Leadership Public-Speaking"]];
+const EXP = [["Internship · Nov–Dec 2025", "Intern Trainee, SOC and VAPT", "Drona Cyber Solutions Pvt Ltd, Ahmedabad", "Hands-on work in Security Operations Center monitoring and vulnerability assessment and penetration testing, using Python."]];
+const EDU = [["2024–2028", "B.Tech Computer Science", "Indus University Ahmedabad", "Core coursework in C and computer science fundamentals; projects in AI, web and embedded systems."],
+["2025", "Smart India Hackathon 2025, Internal Round", "Team lead, Team Attendoo", "Led the team that built the Attendoo attendance system."],
+["Aug 2025", "Certificate of Appreciation, Anchor", "Rotaract Club of Indus University", "Anchored the club's installation ceremony. Green Member since Sep 2025."],
+["Certifications", "Full-Stack Web Development Bootcamp (Udemy, 2025); DSA in Java (Apna College)", "", ""]];
+/* -------------------------------------------- */
+
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const tags=a=>a.map(t=>`<span class="badge text-bg-secondary-subtle border tag me-1 mb-1">${esc(t.replace(/-/g," "))}</span>`).join("");
+
+$("#navlinks").innerHTML=NAV.map(([h,l])=>`<li class="nav-item"><a class="nav-link" href="#${h}" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">${l}</a></li>`).join("");
+$("#stats").innerHTML=STATS.map(([a,b])=>`<div class="col-6"><div class="stat border rounded-3 p-3 bg-body-tertiary"><b>${a}</b><small class="text-body-secondary">${b}</small></div></div>`).join("");
+$("#facts").innerHTML=FACTS.map(([a,b])=>`<dt class="col-sm-4">${a}</dt><dd class="col-sm-8">${esc(b)}</dd>`).join("");
+$("#projlist").innerHTML=PROJECTS.map(p=>`<div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-body">
 <div class="d-flex justify-content-between align-items-start"><h3 class="h4 card-title mb-0">${esc(p.t)}</h3><span class="badge text-bg-light border">${p.y}</span></div>
 <p class="text-ac fw-semibold mb-3">${esc(p.f)}</p><p>${esc(p.d)}</p><div class="mb-3">${tags(p.tags)}</div>
 <p class="mb-1 small"><strong>Impact:</strong> ${esc(p.i)}</p><p class="mb-0 small"><strong>Status:</strong> ${esc(p.s)}</p></div></div></div>`).join("");
-    $("#lab").innerHTML = LAB.map(([a, l]) => `<div class="col-md-6 col-xl-3"><div class="card h-100"><div class="card-body"><h3 class="h5 text-ac">${esc(a)}</h3><ul class="ps-3 mb-0">${l.map(x => `<li class="mb-2">${esc(x)}</li>`).join("")}</ul></div></div></div>`).join("");
-    $("#skilllist").innerHTML = SKILLS.map(([a, s]) => `<div class="col-sm-6 col-lg-4"><h3 class="h6 text-body-secondary">${a}</h3>${tags(s.split(" "))}</div>`).join("");
-    const tl = a => a.map(([t, h, o, d]) => `<div class="tl"><small class="text-ac fw-semibold">${esc(t)}</small><h3 class="h5 mb-1">${esc(h)}</h3>${o ? `<p class="small text-body-secondary mb-1">${esc(o)}</p>` : ""}${d ? `<p class="mb-0">${esc(d)}</p>` : ""}</div>`).join("");
-    $("#exp").innerHTML = tl(EXP); $("#edu").innerHTML = tl(EDU);
-    const L = (i, l, v, h) => `<a class="list-group-item list-group-item-action d-flex align-items-center gap-3 py-3" href="${h}" ${h.startsWith("http") ? 'target="_blank" rel="noopener noreferrer"' : ""}><i class="bi ${i} fs-4 text-ac"></i><div class="text-truncate"><strong class="d-block">${l}</strong><span class="text-body-secondary small">${esc(v)}</span></div></a>`;
-    $("#links").innerHTML = L("bi-envelope", "Email", EMAIL, "mailto:" + EMAIL) + L("bi-github", "GitHub", GITHUB.replace("https://", ""), GITHUB) + L("bi-linkedin", "LinkedIn", LINKEDIN.replace("https://", ""), LINKEDIN);
-    $("#yr").textContent = new Date().getFullYear();
+$("#lab").innerHTML=LAB.map(([a,l])=>`<div class="col-md-6 col-xl-3"><div class="card h-100"><div class="card-body"><h3 class="h5 text-ac">${esc(a)}</h3><ul class="ps-3 mb-0">${l.map(x=>`<li class="mb-2">${esc(x)}</li>`).join("")}</ul></div></div></div>`).join("");
+$("#skilllist").innerHTML=SKILLS.map(([a,s])=>`<div class="col-sm-6 col-lg-4"><h3 class="h6 text-body-secondary">${a}</h3>${tags(s.split(" "))}</div>`).join("");
+const tl=a=>a.map(([t,h,o,d])=>`<div class="tl"><small class="text-ac fw-semibold">${esc(t)}</small><h3 class="h5 mb-1">${esc(h)}</h3>${o?`<p class="small text-body-secondary mb-1">${esc(o)}</p>`:""}${d?`<p class="mb-0">${esc(d)}</p>`:""}</div>`).join("");
+$("#exp").innerHTML=tl(EXP);$("#edu").innerHTML=tl(EDU);
+const L=(i,l,v,h)=>`<a class="list-group-item list-group-item-action d-flex align-items-center gap-3 py-3" href="${h}" ${h.startsWith("http")?'target="_blank" rel="noopener noreferrer"':""}><i class="bi ${i} fs-4 text-ac"></i><div class="text-truncate"><strong class="d-block">${l}</strong><span class="text-body-secondary small">${esc(v)}</span></div></a>`;
+$("#links").innerHTML=L("bi-envelope","Email",EMAIL,"mailto:"+EMAIL)+L("bi-github","GitHub",GITHUB.replace("https://",""),GITHUB)+L("bi-linkedin","LinkedIn",LINKEDIN.replace("https://",""),LINKEDIN);
+$("#yr").textContent=new Date().getFullYear();
 
-    /* theme toggle (remembers choice; safe if storage is blocked) */
-    const root = document.documentElement;
-    try { const t = localStorage.getItem("theme"); if (t) root.dataset.bsTheme = t; else if (matchMedia("(prefers-color-scheme:dark)").matches) root.dataset.bsTheme = "dark" } catch (e) { }
-    $("#theme").onclick = () => { const t = root.dataset.bsTheme === "dark" ? "light" : "dark"; root.dataset.bsTheme = t; try { localStorage.setItem("theme", t) } catch (e) { } };
+/* theme toggle (remembers choice; safe if storage is blocked) */
+const root=document.documentElement;
+try{const t=localStorage.getItem("theme");if(t)root.dataset.bsTheme=t;else if(matchMedia("(prefers-color-scheme:dark)").matches)root.dataset.bsTheme="dark"}catch(e){}
+$("#theme").onclick=()=>{const t=root.dataset.bsTheme==="dark"?"light":"dark";root.dataset.bsTheme=t;try{localStorage.setItem("theme",t)}catch(e){}};
 
-    /* contact form: validates, then opens the visitor's email app addressed to you */
-    $("#form").addEventListener("submit", e => {
-      e.preventDefault(); const f = e.target; f.classList.add("was-validated"); if (!f.checkValidity()) return;
-      const body = `${$("#m").value}\n\nFrom: ${$("#n").value} (${$("#e").value})`;
-      location.href = `mailto:${EMAIL}?subject=${encodeURIComponent("Portfolio contact from " + $("#n").value)}&body=${encodeURIComponent(body)}`;
-    });
-  </script>
+/* contact form: validates, then opens the visitor's email app addressed to you */
+$("#form").addEventListener("submit",e=>{
+  e.preventDefault();const f=e.target;f.classList.add("was-validated");if(!f.checkValidity())return;
+  const body=`${$("#m").value}\n\nFrom: ${$("#n").value} (${$("#e").value})`;
+  location.href=`mailto:${EMAIL}?subject=${encodeURIComponent("Portfolio contact from "+$("#n").value)}&body=${encodeURIComponent(body)}`;
+});
+</script>
 </body>
-
 </html>
